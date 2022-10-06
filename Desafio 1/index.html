@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form name="calImc">
+        <div>
+            <h2>CALCULADORA IMC</h2>
+            <p><label for ="nome">Nome: </label>
+                <input type="text" name="nome2"></p>       
+            
+            <p><label for ="idade">Idade: </label>
+                <input type="text" name="idade2"></p>
+
+            <p><label for="altura">Altura (ex: 170):</label>
+                <input type="text" name="altura2" ></p>
+
+            <p><label for ="peso">Peso (ex: 69,2): </label>
+                <input type="text" name="peso2"></p>
+                   
+            <p>
+                <input type="submit" value="Calcular" onclick="calculo(nome2,altura2,peso2)">
+                <input type = "reset" value = "Limpar" />
+            </p>
+            <p>VEJA A INTERPRETAÇÃO DO IMC:</p>
+            <table border="1" cellspacing="0">
+                <tr>
+                    <td>IMC</td>
+                    <td>CLASSIFICAÇÃO</td>
+                    <td>OBESIDADE(GRAU)</td>
+                </tr>
+                <tr>
+                    <td>MENOR QUE 18,5</td>
+                    <td>MAGREZA</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 18,5 E 24,9</td>
+                    <td>NORMAL</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 25,0 E 29,9</td>
+                    <td>SOBREPESO</td>
+                    <td>I</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 30,0 E 39,9</td>
+                    <td>OBESIDADE</td>
+                    <td>II</td>
+                </tr>
+                <tr>
+                    <td>MAIOR QUE 40,0</td>
+                    <td>OBESIDADE GRAVE</td>
+                    <td>III</td>
+                </tr>        
+            </table> 
+            
+        </div>
+    </form>
+      
+      <script>
+      function calculo(nome2,altura2,peso2) {
+
+        var altura=document.calImc.altura2.value;
+		var peso=document.calImc.peso2.value;
+        var nome=document.calImc.nome2.value;
+        altura =altura.replace(",", ".");
+		peso =peso.replace(",", ".");
+        altura = altura/100;
+        var imc =  (peso/Math.pow(altura,2)).toFixed(1);
+        //console.log( imc);    
+		alert( nome  + "  O seu IMC é: " + imc);      
+      }      
+      </script>        
+</body>
+</html>
