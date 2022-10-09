@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Armazene em valores em variáveis com cada um dos tipos de dados vistos;
+        String, Number e Boolean;
+        Extra: imprima os tipos dos dados.*/
+        let nomeCompleto = "Maria Aparecida"
+        
+        let idade = prompt("Idade")
+        let verifica
+        if( idade < 18)
+        {
+            verifica = true            
+        }
+        else  {  verifica = false }
+         
+        if(verifica == false)
+        {
+            alert(nomeCompleto + ', seja bem vindo!' + ' Sua idade e:' + idade + '. A verificacao foi: ' + verifica)
+            console.log(idade + 10)
+        }
+        else 
+        {
+            alert(nomeCompleto + ', Voce e Menor de idade !' + " Sua idade:" + idade + '.  A verificacao foi: ' + verifica)
+
+        }    
+    </script>
+</body>
+</html>

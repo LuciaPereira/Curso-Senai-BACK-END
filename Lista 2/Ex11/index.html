@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Faça uma estrutura if/else para verificar se um usuário pode dirigir;
+    Armazene em variáveis algumas informações sobre o usuário: idade, se tem CNH
+    Se a idade for maior que 18 e não possuir CNH, exiba uma mensagem;
+    Se a idade for maior que 18 e tem CNH, exiba uma mensagem;
+    Se não tiver 18 nem CNH, exiba outra mensagem;*/
+    const nome = prompt('Informe o nome' )
+    const idade = prompt('Informe a idade' )
+    //do {
+        const cnh = prompt('Possui CNH: digite s para sim e n para nao')
+   // }while(cnh != 's' || cnh != 'n');
+    if(idade>= 18 && cnh=='s' ){
+        alert( nome + ' Voce pode dirigir!')
+    }
+    else if(idade>=18 && cnh == 'n'){
+        alert( nome + ' Voce não pode dirigir! Tire sua CNH .')
+    }
+    else if(idade<18 && cnh == 'n'){
+        alert( nome + ' Voce não pode dirigir! Nao tem idade para ter CNH')
+    }
+    else{
+        alert( nome + ' Voce não pode dirigir!')
+    }
+    </script>
+    
+</body>
+</html>
