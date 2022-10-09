@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+</head>
+<body>
+    <script>
+        /*Verifique se o número é primo!
+        Um número primo, é um número natural, maior que 1 e apenas divisível por si próprio e por 1;*/
+        const primo = prompt('Digite o numero desejado:')
+        if(verifica(primo) == true)
+        {
+            console.log( primo + ' e um numero primo')
+            alert( primo + ' e um numero primo')
+        }
+        else{
+            console.log( primo + ' nao e um numero primo')
+            alert( primo + ' nao e um numero primo')
+        }        
+        function verifica(primo){
+        for(let i = 2; i< primo; i++){
+            if(primo % i == 0)
+            return false
+        }
+        return primo >1
+    }
+    </script> 
+    
+</body>
+</html>
