@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    Primeiro Numero:<br/><input id = "n1" type="number"/><br/>
+    Segundo Numero: <br/> <input id = "n2" type="number"/><br/> <br/>
+    <button onclick="Calculadora.somar()">Somar</button>
+    <button onclick="Calculadora.subtrair()">Subtrair</button>
+    <button onclick="Calculadora.multiplicar()">Multiplicar</button>
+    <button onclick="Calculadora.dividir()">Dividir</button>  
+    <br /><br/>
+    O Resultado e <div id="resposta"></div> 
+      
+    <script>
+        function Calculadora(valor1,valor2)
+        {
+            this.valor1 = valor1;
+            this.valor2 = valor2;
+        }
+            Calculadora.somar = function(){
+                let valor1 = parseInt(document.getElementById('n1').value);
+                let valor2 = parseInt(document.getElementById('n2').value);              
+                console.log(valor1 + valor2);
+                resposta.innerHTML = (valor1 +valor2);
+            }
+            Calculadora.subtrair = function(){
+                let valor1 = parseInt(document.getElementById('n1').value);
+                let valor2 = parseInt(document.getElementById('n2').value);
+                console.log(valor1 - valor2);
+                resposta.innerHTML =  (valor1-valor2);
+            }
+            Calculadora.multiplicar = function(){
+                let valor1 = parseInt(document.getElementById('n1').value);
+                let valor2 = parseInt(document.getElementById('n2').value); 
+                console.log(valor1 *valor2);
+                resposta.innerHTML = (valor1 *valor2); 
+            }
+            Calculadora.dividir = function(){
+                let valor1 = parseInt(document.getElementById('n1').value);
+                let valor2 = parseInt(document.getElementById('n2').value);
+                console.log(valor1 / valor2);
+                resposta.innerHTML =  (valor1 / valor2);
+            }
+
+    
+    </script>
+</body>
+</html>
